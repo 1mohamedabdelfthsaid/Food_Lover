@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript Arrays</h1>
+const header = document.querySelector("header");
 
-<p id="demo"></p>
+window.addEventListener("scroll", function() {
+    header.classList.toggle("sticky", window.scrollY > 60)
+});
 
-<script>
-const cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("demo").innerHTML = cars;
-</script>
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
-</body> 
-</html>
+menu.onclick = () => {
+    menu.classList.toggle("bx-x");
+    navbar.classList.toggle("open");
+};
